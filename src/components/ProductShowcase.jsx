@@ -22,7 +22,8 @@ const ProductShowcase = () => {
                     <div className="order-1 lg:order-2">
                         <span className="text-sm font-medium text-aevon-teal uppercase tracking-widest pl-1">Products</span>
                         <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6 leading-tight">
-                            AI Gamified <br />Cultural Storyline
+                            HERITAGE: <br />
+                            AI Gamified Cultural Storyline
                         </h2>
                         <p className="text-xl text-aevon-cream/70 mb-8 leading-relaxed">
                             Explore your heritage through an immersive, AI-driven narrative.
