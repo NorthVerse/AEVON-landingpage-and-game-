@@ -114,36 +114,72 @@ export default function Team() {
           </Marquee>
         </div>
 
-        {/* Testimonial Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="mx-auto mt-20 max-w-3xl px-6 text-center"
-        >
-          <div className="relative rounded-2xl border border-aevon-teal/20 bg-aevon-navy/30 p-8 backdrop-blur-sm">
-            <p className="mb-8 font-medium text-lg text-aevon-cream leading-relaxed md:text-xl">
-              "Aevon represents the intersection of heritage and innovation. We're committed to creating immersive experiences that preserve and celebrate cultural narratives."
-            </p>
-            <div className="flex flex-col items-center gap-3">
-              <div className="relative h-14 w-14 overflow-hidden rounded-full border-2 border-aevon-teal/30">
-                <img
-                  alt="Samuel Geoffrey"
-                  className="h-full w-full object-cover"
-                  src="/samuel-geoffrey.jpeg"
-                />
-              </div>
-              <div className="text-center">
-                <p className="font-semibold text-aevon-white">
-                  Samuel Geoffrey
+        {/* Testimonials Section */}
+        <div className="mx-auto mt-20 max-w-5xl px-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Samuel's Testimonial */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="w-full"
+            >
+              <div className="relative rounded-2xl border border-aevon-teal/20 bg-aevon-navy/30 p-8 backdrop-blur-sm h-full flex flex-col justify-between">
+                <p className="mb-8 font-medium text-lg text-aevon-cream leading-relaxed">
+                  "Aevon represents the intersection of heritage and innovation. We're committed to creating immersive experiences that preserve and celebrate cultural narratives."
                 </p>
-                <p className="text-aevon-coral text-sm font-medium">
-                  CEO & Co-Founder · AEVON
-                </p>
+                <div className="flex flex-col items-center gap-3">
+                  <div className="relative h-14 w-14 overflow-hidden rounded-full border-2 border-aevon-teal/30">
+                    <img
+                      alt="Samuel Geoffrey"
+                      className="h-full w-full object-cover"
+                      src="/samuel-geoffrey.jpeg"
+                    />
+                  </div>
+                  <div className="text-center">
+                    <p className="font-semibold text-aevon-white">
+                      Samuel Geoffrey
+                    </p>
+                    <p className="text-aevon-coral text-sm font-medium">
+                      CEO & Co-Founder · AEVON
+                    </p>
+                  </div>
+                </div>
               </div>
-            </div>
+            </motion.div>
+
+            {/* Excel's Testimonial */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="w-full"
+            >
+              <div className="relative rounded-2xl border border-aevon-coral/20 bg-aevon-navy/30 p-8 backdrop-blur-sm h-full flex flex-col justify-between">
+                <p className="mb-8 font-medium text-lg text-aevon-cream leading-relaxed">
+                  "AEVON is a future where technology is closer to everyone, not just a few"
+                </p>
+                <div className="flex flex-col items-center gap-3">
+                  <div className="relative h-14 w-14 overflow-hidden rounded-full border-2 border-aevon-coral/30">
+                    <img
+                      alt="Excel Chiemeke"
+                      className="h-full w-full object-cover"
+                      src="/excel-chiemeke.jpeg"
+                    />
+                  </div>
+                  <div className="text-center">
+                    <p className="font-semibold text-aevon-white">
+                      Excel Chiemeke
+                    </p>
+                    <p className="text-aevon-coral text-sm font-medium">
+                      Co-Founder · AEVON
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
