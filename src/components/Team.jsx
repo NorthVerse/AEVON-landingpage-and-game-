@@ -128,7 +128,7 @@ export default function Team() {
                   Samuel Geoffrey
                 </p>
                 <p className="text-aevon-coral text-sm font-medium">
-                  CEO & Co-Founder · Aevon Labs
+                  CEO & Co-Founder · AEVON
                 </p>
               </div>
             </div>
