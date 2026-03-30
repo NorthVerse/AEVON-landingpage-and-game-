@@ -80,11 +80,12 @@ const StoryPortal = () => {
 
                     {/* The Game Iframe */}
                     <iframe
-                        src="https://culture-canvas-puce.vercel.app/"
+                        src={import.meta.env.VITE_GAME_URL}
                         className="w-full h-full border-none"
                         title="Culture Canvas Game"
                         onLoad={() => setIsGameLoaded(true)}
-                        allow="autoplay; fullscreen; keyboard"
+                        sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
+                        referrerPolicy="no-referrer"
                     />
                 </motion.div>
             )}
