@@ -4,14 +4,16 @@ import { useTheme } from 'next-themes';
 import React, { useEffect, useRef } from 'react';
 import * as THREE from 'three';
 
-export function DottedSurface({ className, ...props }) {
+export function DottedSurface({ className, children, ...props }) {
 	const { theme, resolvedTheme } = useTheme();
 
-	const containerRef = useRef(null);
-	const sceneRef = useRef(null);
+	const canvasContainerRef = useRef(null);
 
 	useEffect(() => {
-		if (!containerRef.current) return;
+		if (!canvasContainerRef.current) return;
+        
+        // Guarantee no "phantom" canvases from Vite hot-reloads get stuck
+        canvasContainerRef.current.innerHTML = '';
 
 		const SEPARATION = 150;
 		const AMOUNTX = 40;
@@ -38,7 +40,7 @@ export function DottedSurface({ className, ...props }) {
 		renderer.setSize(window.innerWidth, window.innerHeight);
 		renderer.setClearColor(scene.fog.color, 0);
 
-		containerRef.current.appendChild(renderer.domElement);
+		canvasContainerRef.current.appendChild(renderer.domElement);
 
 		// Create particles
 		const particles = [];
@@ -84,12 +86,15 @@ export function DottedSurface({ className, ...props }) {
 		const points = new THREE.Points(geometry, material);
 		scene.add(points);
 
-		let count = 0;
 		let animationId;
+        const startTime = Date.now();
 
 		// Animation function
 		const animate = () => {
 			animationId = requestAnimationFrame(animate);
+
+            // Using deterministic time guarantees continuous movement and ignores closure traps
+            const elapsed = (Date.now() - startTime) * 0.003; 
 
 			const positionAttribute = geometry.attributes.position;
 			const positions = positionAttribute.array;
@@ -99,10 +104,10 @@ export function DottedSurface({ className, ...props }) {
 				for (let iy = 0; iy < AMOUNTY; iy++) {
 					const index = i * 3;
 
-					// Animate Y position with sine waves (boosted height)
+					// Animate Y position with sine waves
 					positions[index + 1] =
-						Math.sin((ix + count) * 0.3) * 250 +
-						Math.sin((iy + count) * 0.5) * 250;
+						Math.sin((ix + elapsed) * 0.3) * 250 +
+						Math.sin((iy + elapsed) * 0.5) * 250;
 
 					i++;
 				}
@@ -111,10 +116,9 @@ export function DottedSurface({ className, ...props }) {
 			positionAttribute.needsUpdate = true;
 
 			// Add a slow rotation to the scene for more visual movement
-			scene.rotation.y = count * 0.02;
+			scene.rotation.y = elapsed * 0.2;
 
 			renderer.render(scene, camera);
-			count += 0.1;
 		};
 
 		// Handle window resize
@@ -129,52 +133,35 @@ export function DottedSurface({ className, ...props }) {
 		// Start animation
 		animate();
 
-		// Store references
-		sceneRef.current = {
-			scene,
-			camera,
-			renderer,
-			particles: [points],
-			animationId,
-			count,
-		};
-
 		// Cleanup function
 		return () => {
 			window.removeEventListener('resize', handleResize);
-
 			cancelAnimationFrame(animationId);
 
-			if (sceneRef.current) {
+            // Clean up Three.js objects to avoid memory leaks
+            scene.traverse((object) => {
+                if (object instanceof THREE.Points) {
+                    object.geometry.dispose();
+                    if (Array.isArray(object.material)) {
+                        object.material.forEach((material) => material.dispose());
+                    } else {
+                        object.material.dispose();
+                    }
+                }
+            });
 
-				// Clean up Three.js objects
-				sceneRef.current.scene.traverse((object) => {
-					if (object instanceof THREE.Points) {
-						object.geometry.dispose();
-						if (Array.isArray(object.material)) {
-							object.material.forEach((material) => material.dispose());
-						} else {
-							object.material.dispose();
-						}
-					}
-				});
+            renderer.dispose();
 
-				sceneRef.current.renderer.dispose();
-
-				if (containerRef.current && sceneRef.current.renderer.domElement) {
-					containerRef.current.removeChild(
-						sceneRef.current.renderer.domElement,
-					);
-				}
-			}
+            if (canvasContainerRef.current) {
+                canvasContainerRef.current.innerHTML = '';
+            }
 		};
 	}, [theme, resolvedTheme]);
 
 	return (
-		<div
-			ref={containerRef}
-			className={cn('pointer-events-none fixed inset-0 -z-10', className)}
-			{...props}
-		/>
+		<div className={cn('pointer-events-none fixed inset-0 -z-10', className)} {...props}>
+            <div ref={canvasContainerRef} className="absolute inset-0" />
+            {children}
+		</div>
 	);
 }
