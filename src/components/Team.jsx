@@ -46,7 +46,7 @@ export default function Team() {
           </div>
 
           <h2 className="relative mb-4 font-bold text-4xl sm:text-5xl text-aevon-white leading-tight">
-            Meet the Aevon Team
+            Meet the AEVON Team
             <svg
               className="absolute -top-3 -right-8 w-20 text-aevon-coral/20"
               fill="currentColor"
@@ -126,7 +126,7 @@ export default function Team() {
             >
               <div className="relative rounded-2xl border border-aevon-teal/20 bg-aevon-navy/30 p-8 backdrop-blur-sm h-full flex flex-col justify-between">
                 <p className="mb-8 font-medium text-lg text-aevon-cream leading-relaxed">
-                  "Aevon represents the intersection of heritage and innovation. We're committed to creating immersive experiences that preserve and celebrate cultural narratives."
+                  "AEVON represents the intersection of heritage and innovation. We're committed to creating immersive experiences that preserve and celebrate cultural narratives."
                 </p>
                 <div className="flex flex-col items-center gap-3">
                   <div className="relative h-14 w-14 overflow-hidden rounded-full border-2 border-aevon-teal/30">

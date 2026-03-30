@@ -44,7 +44,7 @@ const AIGuideAvatar = () => {
             {/* Overlay Text/Name */}
             <div className="absolute bottom-4 left-0 right-0 text-center pointer-events-none">
                 <span className="text-aevon-white/80 text-sm tracking-[0.2em] uppercase font-light drop-shadow-lg">
-                    Aevon Guide
+                    AEVON Guide
                 </span>
             </div>
         </div>
