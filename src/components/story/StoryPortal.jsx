@@ -21,7 +21,7 @@ const StoryPortal = () => {
                         transition={{ delay: 0.2 }}
                     >
                         <h3 className="text-3xl lg:text-4xl font-bold text-aevon-white mb-4 drop-shadow-xl">
-                            Enter the Aevon Realm
+                            Enter heritage
                         </h3>
                         <p className="text-aevon-cream/90 text-lg mb-8 max-w-md mx-auto leading-relaxed shadow-black drop-shadow-md">
                             Journey into the ancestral forest. Learn, choose, and shape your story in our immersive 3D experience.
