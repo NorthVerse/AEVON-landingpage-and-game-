@@ -84,7 +84,7 @@ const StoryPortal = () => {
                         className="w-full h-full border-none"
                         title="Culture Canvas Game"
                         onLoad={() => setIsGameLoaded(true)}
-                        sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
+                        sandbox="allow-scripts allow-popups allow-forms allow-presentation allow-top-navigation"
                         referrerPolicy="no-referrer"
                     />
                 </motion.div>
