@@ -3,7 +3,7 @@ import { Marquee } from '@/components/ui/marquee';
 
 const teamMembers = [
   {
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=400&auto=format&fit=crop",
+    image: "/samuel-geoffrey.jpeg",
     name: "Samuel Geoffrey",
     role: "CEO - Co-Founder",
   },
@@ -120,7 +120,7 @@ export default function Team() {
                 <img
                   alt="Samuel Geoffrey"
                   className="h-full w-full object-cover"
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=400&auto=format&fit=crop"
+                  src="/samuel-geoffrey.jpeg"
                 />
               </div>
               <div className="text-center">
