@@ -7,6 +7,11 @@ const teamMembers = [
     name: "Samuel Geoffrey",
     role: "CEO - Co-Founder",
   },
+  {
+    image: "/excel-chiemeke.jpeg",
+    name: "Excel Chiemeke",
+    role: "Co-Founder",
+  },
   // Additional team members will be added later
 ];
 
