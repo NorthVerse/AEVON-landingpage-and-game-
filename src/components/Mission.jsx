@@ -21,7 +21,7 @@ const Mission = () => {
                     <span className="text-sm font-medium text-aevon-white/40 uppercase tracking-widest pl-1">Our Mission</span>
                     <h2 className="text-4xl md:text-5xl font-bold mt-4 max-w-2xl text-aevon-white leading-tight">
                         Bridging gaps in <br className="hidden md:block" />
-                        <span className="text-gradient">human development</span>.
+                        <span className="text-gradient">human development</span>
                     </h2>
                 </motion.div>
 

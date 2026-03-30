@@ -23,7 +23,7 @@ const Hero = () => {
                 >
                     Lead a future where <br />
                     <span className="text-gradient">artificial intelligence</span> is a <br />
-                    universal benefit.
+                    universal benefit
                 </motion.h1>
 
                 <motion.p
