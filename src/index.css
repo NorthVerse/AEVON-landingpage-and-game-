@@ -53,3 +53,18 @@
   scrollbar-width: thin;
   scrollbar-color: rgba(20, 184, 166, 0.4) rgba(26, 26, 46, 0.2);
 }
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - var(--gap, 1rem)));
+  }
+}
+
+@layer utilities {
+  .animate-marquee {
+    animation: marquee var(--duration, 40s) linear infinite;
+  }
+}

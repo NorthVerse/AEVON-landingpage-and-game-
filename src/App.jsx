@@ -3,6 +3,7 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import Mission from './components/Mission';
 import ProductShowcase from './components/ProductShowcase';
+import Team from './components/Team';
 import Footer from './components/Footer';
 import GamePage from './pages/GamePage';
 import { DottedSurface } from '@/components/ui/dotted-surface';
@@ -19,6 +20,7 @@ function App() {
               <Hero />
               <Mission />
               <ProductShowcase />
+              <Team />
             </main>
             <Footer />
           </div>
