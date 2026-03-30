@@ -1,16 +1,36 @@
-# React + Vite
+# AEVON Prototype
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+AEVON is a visionary platform dedicated to leading a future where artificial intelligence is a universal benefit. We focus on bridging gaps in human development through accessible tools and immersive cultural experiences.
 
-Currently, two official plugins are available:
+## 🚀 Key Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **HERITAGE: AI Gamified Cultural Storyline**: An immersive 3D experience where you explore ancestral heritage through AI-driven narratives and interactive choice systems.
+- **Dynamic 3D Backgrounds**: High-performance, Three.js-powered animated surfaces providing a premium, modern aesthetic.
+- **AI Mentors & Guides**: Adaptive interaction systems designed to help users learn language, traditions, and history.
+- **Modern Responsive UI**: Built with React, Vite, Tailwind CSS, and Framer Motion for smooth, high-fidelity animations.
 
-## React Compiler
+## 🛠️ Technical Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Framework**: React + Vite
+- **3D Engine**: Three.js
+- **Animations**: Framer Motion
+- **Styling**: Tailwind CSS
+- **Theming**: next-themes
+- **Analytics**: Vercel Analytics
 
-## Expanding the ESLint configuration
+## 📦 Setup & Development
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+```
+
+## 🌐 Deployment
+
+The project is optimized for deployment on **Vercel**. Every push to the `main` branch automatically triggers a deployment with full Vercel Analytics support.
