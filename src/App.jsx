@@ -1,4 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
+import { Analytics } from '@vercel/analytics/react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Mission from './components/Mission';
@@ -10,24 +11,27 @@ import { DottedSurface } from '@/components/ui/dotted-surface';
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={
-        <div className="relative min-h-screen bg-aevon-charcoal text-aevon-white overflow-x-hidden selection:bg-purple-500/30">
-          <DottedSurface className="opacity-40" />
-          <div className="relative z-10">
-            <Header />
-            <main>
-              <Hero />
-              <Mission />
-              <ProductShowcase />
-              <Team />
-            </main>
-            <Footer />
+    <>
+      <Routes>
+        <Route path="/" element={
+          <div className="relative min-h-screen bg-aevon-charcoal text-aevon-white overflow-x-hidden selection:bg-purple-500/30">
+            <DottedSurface className="opacity-40" />
+            <div className="relative z-10">
+              <Header />
+              <main>
+                <Hero />
+                <Mission />
+                <ProductShowcase />
+                <Team />
+              </main>
+              <Footer />
+            </div>
           </div>
-        </div>
-      } />
-      <Route path="/game" element={<GamePage />} />
-    </Routes>
+        } />
+        <Route path="/game" element={<GamePage />} />
+      </Routes>
+      <Analytics />
+    </>
   );
 }
 
