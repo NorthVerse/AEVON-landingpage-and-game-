@@ -9,7 +9,7 @@ const Footer = () => {
                 </div>
                 <div className="flex space-x-6 items-center">
                     <a
-                        href="https://twitter.com/Aevonai"
+                        href="https://x.com/aevonai"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-aevon-white/60 hover:text-aevon-coral transition-colors duration-300"
