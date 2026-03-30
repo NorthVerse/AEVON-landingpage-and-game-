@@ -12,6 +12,11 @@ const teamMembers = [
     name: "Excel Chiemeke",
     role: "Co-Founder",
   },
+  {
+    image: "/miracle-egbujor.jpeg",
+    name: "Barr. Miracle Egbujor",
+    role: "Legal Advisor",
+  },
   // Additional team members will be added later
 ];
 
