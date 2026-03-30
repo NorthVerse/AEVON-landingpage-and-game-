@@ -4,20 +4,11 @@ import { useTheme } from 'next-themes';
 import React, { useEffect, useRef } from 'react';
 import * as THREE from 'three';
 
-type DottedSurfaceProps = Omit<React.ComponentProps<'div'>, 'ref'>;
+export function DottedSurface({ className, ...props }) {
+	const { theme, resolvedTheme } = useTheme();
 
-export function DottedSurface({ className, ...props }: DottedSurfaceProps) {
-	const { theme } = useTheme();
-
-	const containerRef = useRef<HTMLDivElement>(null);
-	const sceneRef = useRef<{
-		scene: THREE.Scene;
-		camera: THREE.PerspectiveCamera;
-		renderer: THREE.WebGLRenderer;
-		particles: THREE.Points[];
-		animationId: number;
-		count: number;
-	} | null>(null);
+	const containerRef = useRef(null);
+	const sceneRef = useRef(null);
 
 	useEffect(() => {
 		if (!containerRef.current) return;
@@ -36,7 +27,7 @@ export function DottedSurface({ className, ...props }: DottedSurfaceProps) {
 			1,
 			10000,
 		);
-		camera.position.set(0, 355, 1220);
+		camera.position.set(0, 800, 1800);
 		camera.lookAt(0, 0, 0);
 
 		const renderer = new THREE.WebGLRenderer({
@@ -50,12 +41,14 @@ export function DottedSurface({ className, ...props }: DottedSurfaceProps) {
 		containerRef.current.appendChild(renderer.domElement);
 
 		// Create particles
-		const particles: THREE.Points[] = [];
-		const positions: number[] = [];
-		const colors: number[] = [];
+		const particles = [];
+		const positions = [];
+		const colors = [];
 
 		// Create geometry for all particles
 		const geometry = new THREE.BufferGeometry();
+		
+		const isDark = theme === 'dark' || resolvedTheme === 'dark';
 
 		for (let ix = 0; ix < AMOUNTX; ix++) {
 			for (let iy = 0; iy < AMOUNTY; iy++) {
@@ -64,10 +57,10 @@ export function DottedSurface({ className, ...props }: DottedSurfaceProps) {
 				const z = iy * SEPARATION - (AMOUNTY * SEPARATION) / 2;
 
 				positions.push(x, y, z);
-				if (theme === 'dark') {
-					colors.push(200, 200, 200);
+				if (isDark) {
+					colors.push(1.0, 1.0, 1.0); // White dots for dark mode
 				} else {
-					colors.push(0, 0, 0);
+					colors.push(0.0, 0.0, 0.0); // Black dots for light mode
 				}
 			}
 		}
@@ -92,39 +85,30 @@ export function DottedSurface({ className, ...props }: DottedSurfaceProps) {
 		scene.add(points);
 
 		let count = 0;
-		let animationId: number;
+		let animationId;
 
 		// Animation function
 		const animate = () => {
 			animationId = requestAnimationFrame(animate);
 
 			const positionAttribute = geometry.attributes.position;
-			const positions = positionAttribute.array as Float32Array;
+			const positions = positionAttribute.array;
 
 			let i = 0;
 			for (let ix = 0; ix < AMOUNTX; ix++) {
 				for (let iy = 0; iy < AMOUNTY; iy++) {
 					const index = i * 3;
 
-					// Animate Y position with sine waves
+					// Animate Y position with sine waves (boosted height)
 					positions[index + 1] =
-						Math.sin((ix + count) * 0.3) * 50 +
-						Math.sin((iy + count) * 0.5) * 50;
+						Math.sin((ix + count) * 0.3) * 250 +
+						Math.sin((iy + count) * 0.5) * 250;
 
 					i++;
 				}
 			}
 
 			positionAttribute.needsUpdate = true;
-
-			// Update point sizes based on wave
-			const customMaterial = material as THREE.PointsMaterial & {
-				uniforms?: any;
-			};
-			if (!customMaterial.uniforms) {
-				// For dynamic size changes, we'd need a custom shader
-				// For now, keeping constant size for performance
-			}
 
 			// Add a slow rotation to the scene for more visual movement
 			scene.rotation.y = count * 0.02;
@@ -184,7 +168,7 @@ export function DottedSurface({ className, ...props }: DottedSurfaceProps) {
 				}
 			}
 		};
-	}, [theme]);
+	}, [theme, resolvedTheme]);
 
 	return (
 		<div
