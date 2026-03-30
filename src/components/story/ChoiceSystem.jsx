@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { ChevronRight } from 'lucide-react';
 
 const ChoiceCard = ({ option, index, onChoice }) => {
     return (
@@ -49,9 +50,14 @@ const ChoiceCard = ({ option, index, onChoice }) => {
             {/* Content - Fixed layout to prevent overlap */}
             <div className="relative z-10 flex flex-col h-full min-h-[120px]" style={{ transform: 'translateZ(20px)' }}>
                 <div className="flex-1">
-                    <h3 className="text-aevon-cream font-bold text-lg mb-2 group-hover:text-white transition-colors line-clamp-2">
-                        {option.label}
-                    </h3>
+                    <div className="flex items-center relative overflow-hidden mb-2">
+                        <h3 className="text-aevon-cream font-bold text-lg transition-opacity duration-500 group-hover:opacity-0">
+                            {option.label}
+                        </h3>
+                        <div className="absolute right-0 top-0 bottom-0 rounded-sm z-10 grid w-1/4 place-items-center transition-all duration-500 bg-aevon-teal/15 group-hover:w-[calc(100%-0rem)] group-active:scale-95 text-aevon-teal">
+                            <ChevronRight size={20} strokeWidth={2} aria-hidden="true" />
+                        </div>
+                    </div>
                     <p className="text-sm text-aevon-white/70 group-hover:text-aevon-white/90 transition-colors leading-relaxed line-clamp-3">
                         {option.description}
                     </p>
