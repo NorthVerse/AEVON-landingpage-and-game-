@@ -1,4 +1,4 @@
-import { Twitter, Instagram, Linkedin, Mail } from 'lucide-react';
+import { X, Mail } from 'lucide-react';
 
 const Footer = () => {
     return (
@@ -13,23 +13,30 @@ const Footer = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-aevon-white/60 hover:text-aevon-coral transition-colors duration-300"
-                        aria-label="Twitter"
+                        aria-label="X (Twitter)"
                     >
-                        <Twitter size={20} />
+                        <X size={20} />
                     </a>
                     <a
                         href="#"
                         className="text-aevon-white/60 hover:text-aevon-coral transition-colors duration-300"
                         aria-label="Instagram"
                     >
-                        <Instagram size={20} />
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                            <circle cx="17.5" cy="6.5" r="1.5" />
+                        </svg>
                     </a>
                     <a
                         href="#"
                         className="text-aevon-white/60 hover:text-aevon-coral transition-colors duration-300"
                         aria-label="LinkedIn"
                     >
-                        <Linkedin size={20} />
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z" />
+                            <circle cx="4" cy="4" r="2" />
+                        </svg>
                     </a>
                     <a
                         href="#"
