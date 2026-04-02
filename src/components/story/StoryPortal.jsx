@@ -1,9 +1,21 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
 const StoryPortal = () => {
     const [isJourneyActive, setIsJourneyActive] = useState(false);
     const [isGameLoaded, setIsGameLoaded] = useState(false);
+
+    useEffect(() => {
+        if (isJourneyActive) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
+        }
+
+        return () => {
+            document.body.style.overflow = '';
+        };
+    }, [isJourneyActive]);
 
     return (
         <>
