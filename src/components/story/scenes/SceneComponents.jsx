@@ -5,8 +5,8 @@ import { Float, Cylinder, Box, Sphere, Cone, Torus, Decal } from '@react-three/d
 // Materials (Shared)
 const colors = {
     navy: '#1A1A2E',
-    coral: '#FF6B6B',
-    amber: '#FFB347',
+    coral: '#c3070b',
+    amber: '#fe782d',
     teal: '#14B8A6',
     cream: '#FFF1E6',
     gold: '#F59E0B'
