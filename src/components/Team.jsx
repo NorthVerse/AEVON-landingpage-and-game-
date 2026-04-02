@@ -104,7 +104,7 @@ export default function Team() {
                     <h3 className="font-bold text-xl text-aevon-cream mb-1">
                       {member.name}
                     </h3>
-                    <p className="text-aevon-coral text-sm font-medium">
+                    <p className="text-aevon-amber text-sm font-medium">
                       {member.role}
                     </p>
                   </div>
@@ -140,7 +140,7 @@ export default function Team() {
                     <p className="font-semibold text-aevon-white">
                       Samuel Geoffrey
                     </p>
-                    <p className="text-aevon-coral text-sm font-medium">
+                    <p className="text-aevon-amber text-sm font-medium">
                       CEO & Co-Founder · AEVON
                     </p>
                   </div>
@@ -171,7 +171,7 @@ export default function Team() {
                     <p className="font-semibold text-aevon-white">
                       Excel Chiemeke
                     </p>
-                    <p className="text-aevon-coral text-sm font-medium">
+                    <p className="text-aevon-amber text-sm font-medium">
                       Co-Founder · AEVON
                     </p>
                   </div>
