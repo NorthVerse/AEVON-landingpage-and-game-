@@ -30,7 +30,7 @@ export const ForestGem = (props) => {
                 {/* Gem Core */}
                 <Icosahedron args={[0.6, 0]}>
                     <meshPhysicalMaterial
-                        color="#14B8A6"
+                        color="#4169E1"
                         roughness={0}
                         metalness={0.2}
                         transmission={0.8} // Glass-like

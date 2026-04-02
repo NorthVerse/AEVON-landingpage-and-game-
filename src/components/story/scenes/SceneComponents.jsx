@@ -7,7 +7,7 @@ const colors = {
     navy: '#1A1A2E',
     coral: '#c3070b',
     amber: '#fe782d',
-    teal: '#14B8A6',
+    teal: '#4169E1',
     cream: '#FFF1E6',
     gold: '#F59E0B'
 };
