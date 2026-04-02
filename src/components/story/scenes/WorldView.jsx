@@ -19,7 +19,7 @@ const WorldView = ({ sceneId = 'village' }) => {
                 }}
                 onError={(e) => console.error('R3F Canvas Error:', e)}
             >
-                <ErrorBoundary fallback={<mesh><boxGeometry /><meshStandardMaterial color="red" /></mesh>}>
+                <ErrorBoundary fallback={<mesh><boxGeometry /><meshStandardMaterial color="#fe782d" /></mesh>}>
                     {/* Isometric Camera */}
                     <OrthographicCamera
                         makeDefault

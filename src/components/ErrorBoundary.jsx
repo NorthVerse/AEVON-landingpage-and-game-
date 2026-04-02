@@ -22,13 +22,13 @@ class ErrorBoundary extends Component {
 
             return (
                 <div className="w-screen h-screen bg-aevon-charcoal flex items-center justify-center p-8">
-                    <div className="max-w-2xl bg-red-900/20 border border-red-500/50 rounded-2xl p-8">
-                        <h1 className="text-3xl font-bold text-red-400 mb-4">Something went wrong</h1>
+                    <div className="max-w-2xl bg-aevon-amber/20 border border-aevon-amber/50 rounded-2xl p-8">
+                        <h1 className="text-3xl font-bold text-aevon-amber mb-4">Something went wrong</h1>
                         <p className="text-aevon-cream/80 mb-4">
                             The application encountered an error. Please try refreshing the page or contact support if the problem persists.
                         </p>
                         {isDevelopment && this.state.error && (
-                            <pre className="bg-black/50 p-4 rounded-lg text-xs text-red-300 overflow-auto max-h-64">
+                            <pre className="bg-black/50 p-4 rounded-lg text-xs text-aevon-amber/80 overflow-auto max-h-64">
                                 {this.state.error.toString()}
                                 {this.state.errorInfo && this.state.errorInfo.componentStack}
                             </pre>
