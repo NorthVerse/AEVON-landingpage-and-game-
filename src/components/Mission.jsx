@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 
 const Mission = () => {
     const items = [
-        { title: "Education", description: "Democratizing knowledge through adaptive AI mentors." },
+        { title: "Education", description: "Democratizing knowledge through adaptive AI models." },
         { title: "Finance", description: "Simplifying complex economic systems for everyone." },
         { title: "Culture", description: "Preserving and redesigning how culture, language and tradition is passed to the next generation using AI models." },
     ];
