@@ -19,7 +19,13 @@ const Header = () => {
                 <a href="#team" className="hover:text-white transition-colors">Team</a>
             </nav>
 
-            <button className="px-6 py-2 bg-white/10 hover:bg-white/20 text-white rounded-full transition-colors text-sm font-medium">
+            <button 
+                onClick={() => {
+                    const element = document.getElementById('products');
+                    element?.scrollIntoView({ behavior: 'smooth' });
+                }}
+                className="px-6 py-2 bg-white/10 hover:bg-white/20 text-white rounded-full transition-colors text-sm font-medium"
+            >
                 Get Started
             </button>
         </motion.header>
