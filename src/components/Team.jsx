@@ -22,14 +22,14 @@ const teamMembers = [
 
 export default function Team() {
   return (
-    <section id="team" className="relative w-full overflow-hidden bg-aevon-charcoal py-16 md:py-24">
+    <section id="team" className="relative w-full overflow-hidden bg-aevon-charcoal py-16 md:py-24 px-4 sm:px-6 lg:px-8">
       {/* Background decorative elements */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute right-0 top-1/4 w-96 h-96 bg-aevon-teal/5 rounded-full blur-3xl" />
-        <div className="absolute left-0 bottom-1/4 w-96 h-96 bg-aevon-coral/5 rounded-full blur-3xl" />
+        <div className="absolute right-0 top-1/4 w-72 h-72 sm:w-96 sm:h-96 bg-aevon-teal/5 rounded-full blur-3xl" />
+        <div className="absolute left-0 bottom-1/4 w-72 h-72 sm:w-96 sm:h-96 bg-aevon-coral/5 rounded-full blur-3xl" />
       </div>
 
-      <div className="relative z-10 mx-auto max-w-7xl px-6">
+      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -60,16 +60,16 @@ export default function Team() {
           <div className="pointer-events-none absolute top-0 left-0 z-20 h-full w-32 bg-gradient-to-r from-aevon-charcoal to-transparent" />
           <div className="pointer-events-none absolute top-0 right-0 z-20 h-full w-32 bg-gradient-to-l from-aevon-charcoal to-transparent" />
 
-          <Marquee className="[--gap:2rem] [--duration:40s] px-4 sm:px-0" pauseOnHover>
+          <Marquee className="[--gap:2rem] [--duration:40s] px-2 sm:px-4" pauseOnHover>
             {teamMembers.map((member) => (
               <motion.div
                 key={member.name}
                 whileHover={{ y: -8 }}
                 transition={{ duration: 0.3 }}
-                className="group flex w-72 shrink-0 flex-col"
+                className="group flex w-64 sm:w-72 shrink-0 flex-col"
               >
                 {/* Team Member Card */}
-                <div className="relative h-80 w-full overflow-hidden rounded-2xl bg-aevon-navy/40 border border-aevon-teal/20 group-hover:border-aevon-teal/50 transition-colors duration-300">
+                <div className="relative h-[320px] sm:h-80 w-full overflow-hidden rounded-2xl bg-aevon-navy/40 border border-aevon-teal/20 group-hover:border-aevon-teal/50 transition-colors duration-300">
                   {/* Image */}
                   <img
                     alt={member.name}

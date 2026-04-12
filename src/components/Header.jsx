@@ -6,7 +6,7 @@ const Header = () => {
             initial={{ y: -100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="fixed w-full z-50 bg-aevon-navy/80 backdrop-blur-md border-b border-white/5 px-6 py-6 flex justify-between items-center"
+            className="fixed w-full z-50 bg-aevon-navy/80 backdrop-blur-md border-b border-white/5 px-4 sm:px-6 py-4 sm:py-6 flex justify-between items-center"
         >
             <span className="text-2xl font-bold tracking-tighter text-white">
                 AEVON

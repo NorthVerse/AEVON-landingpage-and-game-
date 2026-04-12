@@ -8,8 +8,8 @@ const Mission = () => {
     ];
 
     return (
-        <section id="mission" className="py-24 px-6 border-b border-aevon-white/5 bg-aevon-charcoal relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-96 h-96 bg-purple-900/10 rounded-full blur-3xl pointer-events-none -translate-y-1/2 translate-x-1/2"></div>
+        <section id="mission" className="py-24 px-4 sm:px-6 border-b border-aevon-white/5 bg-aevon-charcoal relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-72 h-72 sm:w-96 sm:h-96 bg-purple-900/10 rounded-full blur-3xl pointer-events-none -translate-y-1/2 translate-x-1/2"></div>
 
             <div className="max-w-6xl mx-auto">
                 <motion.div
@@ -19,13 +19,13 @@ const Mission = () => {
                     className="mb-16"
                 >
                     <span className="text-sm font-medium text-aevon-white/40 uppercase tracking-widest pl-1">Our Mission</span>
-                    <h2 className="text-4xl md:text-5xl font-bold mt-4 max-w-2xl text-aevon-white leading-tight">
+                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mt-4 max-w-2xl text-aevon-white leading-tight">
                         Bridging gaps in <br className="hidden md:block" />
                         <span className="text-gradient">human development</span>
                     </h2>
                 </motion.div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
                     {items.map((item, index) => (
                         <motion.div
                             key={index}
