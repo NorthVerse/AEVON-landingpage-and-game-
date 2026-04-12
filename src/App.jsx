@@ -12,7 +12,7 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={
-        <div className="relative min-h-screen bg-aevon-charcoal text-aevon-white overflow-x-hidden selection:bg-purple-500/30">
+        <div className="relative min-h-screen text-aevon-white overflow-x-hidden selection:bg-purple-500/30">
           <DottedSurface className="opacity-40" />
           <div className="relative z-10">
             <Header />

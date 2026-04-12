@@ -8,7 +8,7 @@ const Mission = () => {
     ];
 
     return (
-        <section id="mission" className="py-24 px-4 sm:px-6 border-b border-aevon-white/5 bg-aevon-charcoal relative overflow-hidden">
+        <section id="mission" className="py-24 px-4 sm:px-6 border-b border-aevon-white/5 relative overflow-hidden">
             <div className="absolute top-0 right-0 w-72 h-72 sm:w-96 sm:h-96 bg-purple-900/10 rounded-full blur-3xl pointer-events-none -translate-y-1/2 translate-x-1/2"></div>
 
             <div className="max-w-6xl mx-auto">

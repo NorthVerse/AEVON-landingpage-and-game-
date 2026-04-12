@@ -20,7 +20,7 @@ const Hero = () => {
     // const [showDemo, setShowDemo] = useState(false);
 
     return (
-        <section id="vision" className="relative min-h-screen flex flex-col justify-center px-4 sm:px-6 lg:px-8 pt-12 sm:pt-16 md:pt-20 border-b border-aevon-white/5 bg-aevon-navy text-aevon-white overflow-hidden">
+        <section id="vision" className="relative min-h-screen flex flex-col justify-center px-4 sm:px-6 lg:px-8 pt-12 sm:pt-16 md:pt-20 border-b border-aevon-white/5 text-aevon-white overflow-hidden">
             {/* Background Video */}
             {!videoError ? (
                 <video

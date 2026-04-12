@@ -22,7 +22,7 @@ const teamMembers = [
 
 export default function Team() {
   return (
-    <section id="team" className="relative w-full overflow-hidden bg-aevon-charcoal py-16 md:py-24 px-4 sm:px-6 lg:px-8">
+    <section id="team" className="relative w-full overflow-hidden py-16 md:py-24 px-4 sm:px-6 lg:px-8">
       {/* Background decorative elements */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute right-0 top-1/4 w-72 h-72 sm:w-96 sm:h-96 bg-aevon-teal/5 rounded-full blur-3xl" />

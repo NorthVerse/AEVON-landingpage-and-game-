@@ -21,7 +21,7 @@ const StoryPortal = () => {
         <>
             <div className="w-full h-[500px] rounded-3xl relative overflow-hidden group border border-aevon-white/10 bg-aevon-charcoal/50">
                 {/* Background Image / Placeholder */}
-                <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1518155317743-a4fbf30294fc?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center opacity-40 group-hover:opacity-60 transition-opacity duration-700 transform group-hover:scale-105" />
+                <div className="absolute inset-0 bg-[url('/heritage-journey.jpg')] bg-cover bg-center opacity-60 group-hover:opacity-80 transition-opacity duration-700 transform group-hover:scale-105" />
 
                 {/* Overlay Gradient */}
                 <div className="absolute inset-0 bg-gradient-to-t from-aevon-navy via-aevon-navy/60 to-transparent" />
