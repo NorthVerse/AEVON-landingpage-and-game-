@@ -4,7 +4,7 @@ const Mission = () => {
     const items = [
         { title: "Education", description: "Democratizing knowledge through adaptive AI mentors." },
         { title: "Finance", description: "Simplifying complex economic systems for everyone." },
-        { title: "Culture", description: "Preserving and celebrating heritage in the digital age." },
+        { title: "Culture", description: "Preserving and redesigning how culture, language and tradition is passed to the next generation using AI models." },
     ];
 
     return (
