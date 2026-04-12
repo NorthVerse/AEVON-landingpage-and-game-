@@ -50,7 +50,7 @@ export default function Team() {
           </h2>
 
           <p className="max-w-2xl text-aevon-cream/80 text-lg">
-            Visionary leaders and creators crafting the future of heritage through immersive experiences.
+            Visionary leaders crafting the future of heritage through immersive experiences.
           </p>
         </motion.div>
 
