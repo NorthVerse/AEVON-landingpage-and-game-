@@ -67,4 +67,31 @@
   .animate-marquee {
     animation: marquee var(--duration, 40s) linear infinite;
   }
+
+  .animate-fade-in {
+    animation: fadeIn 2s ease-in-out;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.6;
+  }
+}
+
+/* Video responsive styles */
+video {
+  min-width: 100%;
+  min-height: 100%;
+}
+
+/* Ensure video covers properly on mobile */
+@media (max-width: 640px) {
+  video {
+    object-fit: cover;
+    object-position: center;
+  }
 }
