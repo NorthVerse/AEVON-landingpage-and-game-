@@ -8,7 +8,7 @@ const Hero = () => {
     // const [showDemo, setShowDemo] = useState(false);
 
     return (
-        <section id="vision" className="relative min-h-screen flex flex-col justify-center px-4 sm:px-6 lg:px-8 pt-20 border-b border-aevon-white/5 bg-aevon-navy text-aevon-white overflow-hidden">
+        <section id="vision" className="relative min-h-screen flex flex-col justify-center px-4 sm:px-6 lg:px-8 pt-12 sm:pt-16 md:pt-20 border-b border-aevon-white/5 bg-aevon-navy text-aevon-white overflow-hidden">
             {/* Background Grid Lines Mockup */}
             <div className="absolute inset-0 pointer-events-none opacity-20"
                 style={{ backgroundImage: 'linear-gradient(to right, #334155 1px, transparent 1px), linear-gradient(to bottom, #334155 1px, transparent 1px)', backgroundSize: '4rem 4rem' }}>
@@ -30,7 +30,7 @@ const Hero = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.6 }}
-                    className="mt-8 sm:mt-10 text-base sm:text-lg md:text-xl text-aevon-cream/80 max-w-xl md:max-w-2xl"
+                    className="mt-6 sm:mt-8 md:mt-10 text-base sm:text-lg md:text-xl text-aevon-cream/80 max-w-xl md:max-w-2xl"
                 >
                     Making complex living easier through accessible tools for human development.
                 </motion.p>
