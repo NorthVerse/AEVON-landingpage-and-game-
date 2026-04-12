@@ -5,7 +5,7 @@ const teamMembers = [
   {
     image: "/samuel-geoffrey.jpeg",
     name: "Samuel Geoffrey",
-    role: "CEO - Co-Founder",
+    role: "CEO & Founder",
   },
   {
     image: "/excel-chiemeke.jpeg",
@@ -141,7 +141,7 @@ export default function Team() {
                       Samuel Geoffrey
                     </p>
                     <p className="text-aevon-amber text-sm font-medium">
-                      CEO & Co-Founder · AEVON
+                      CEO & Founder · AEVON
                     </p>
                   </div>
                 </div>
