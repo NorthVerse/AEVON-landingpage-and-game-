@@ -18,7 +18,7 @@ const Footer = () => {
                         <X size={20} />
                     </a>
                     <a
-                        href="https://www.instagram.com/aevonai_?igsh=dXh6b3pyZGJ6ZGRi&utm_source=qr"
+                        href="https://www.instagram.com/aevonai_"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-aevon-white/60 hover:text-aevon-coral transition-colors duration-300"
