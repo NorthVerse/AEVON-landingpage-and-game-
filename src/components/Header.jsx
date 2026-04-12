@@ -14,9 +14,9 @@ const Header = () => {
 
             <nav className="hidden md:flex space-x-8 text-sm font-medium text-white/70">
                 <a href="#mission" className="hover:text-white transition-colors">Mission</a>
+                <a href="#vision" className="hover:text-white transition-colors">Vision</a>
                 <a href="#products" className="hover:text-white transition-colors">Products</a>
                 <a href="#team" className="hover:text-white transition-colors">Team</a>
-                <a href="#vision" className="hover:text-white transition-colors">Vision</a>
             </nav>
 
             <button className="px-6 py-2 bg-white/10 hover:bg-white/20 text-white rounded-full transition-colors text-sm font-medium">
