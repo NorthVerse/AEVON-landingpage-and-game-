@@ -47,22 +47,6 @@ export default function Team() {
 
           <h2 className="relative mb-4 font-bold text-4xl sm:text-5xl text-aevon-white leading-tight">
             Meet the AEVON Team
-            <svg
-              className="absolute -top-3 -right-8 w-20 text-aevon-coral/20"
-              fill="currentColor"
-              height="86"
-              viewBox="0 0 108 86"
-              width="108"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M38.8484 16.236L15 43.5793L78.2688 15L18.1218 71L93 34.1172L70.2047 65.2739"
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="28"
-              />
-            </svg>
           </h2>
 
           <p className="max-w-2xl text-aevon-cream/80 text-lg">
