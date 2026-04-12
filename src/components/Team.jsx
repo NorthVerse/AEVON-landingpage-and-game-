@@ -70,19 +70,19 @@ export default function Team() {
           </p>
         </motion.div>
 
-        {/* Team scroll list */}
+        {/* Team marquee */}
         <div className="relative w-full py-8">
           {/* Fade overlays */}
           <div className="pointer-events-none absolute top-0 left-0 z-20 h-full w-32 bg-gradient-to-r from-aevon-charcoal to-transparent" />
           <div className="pointer-events-none absolute top-0 right-0 z-20 h-full w-32 bg-gradient-to-l from-aevon-charcoal to-transparent" />
 
-          <div className="flex gap-8 overflow-x-auto pb-4 scroll-smooth custom-scrollbar px-4 sm:px-0">
+          <Marquee className="[--gap:2rem] [--duration:40s] px-4 sm:px-0" pauseOnHover>
             {teamMembers.map((member) => (
               <motion.div
                 key={member.name}
                 whileHover={{ y: -8 }}
                 transition={{ duration: 0.3 }}
-                className="group flex w-72 shrink-0 snap-start flex-col"
+                className="group flex w-72 shrink-0 flex-col"
               >
                 {/* Team Member Card */}
                 <div className="relative h-80 w-full overflow-hidden rounded-2xl bg-aevon-navy/40 border border-aevon-teal/20 group-hover:border-aevon-teal/50 transition-colors duration-300">
@@ -111,7 +111,7 @@ export default function Team() {
                 </div>
               </motion.div>
             ))}
-          </div>
+          </Marquee>
         </div>
 
         {/* Testimonials Section */}
