@@ -75,6 +75,7 @@ export default function Team() {
                     alt={member.name}
                     src={member.image}
                     className="h-full w-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                    loading="lazy"
                   />
 
                   {/* Gradient overlay */}
@@ -118,6 +119,7 @@ export default function Team() {
                       alt="Samuel Geoffrey"
                       className="h-full w-full object-cover"
                       src="/samuel-geoffrey.jpeg"
+                      loading="lazy"
                     />
                   </div>
                   <div className="text-center">
@@ -149,6 +151,7 @@ export default function Team() {
                       alt="Excel Chiemeke"
                       className="h-full w-full object-cover"
                       src="/excel-chiemeke.jpeg"
+                      loading="lazy"
                     />
                   </div>
                   <div className="text-center">

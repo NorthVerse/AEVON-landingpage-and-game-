@@ -61,9 +61,8 @@ const Hero = () => {
                     transition={{ duration: 0.8, delay: 0.2 }}
                     className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold leading-tight tracking-tighter"
                 >
-                    Lead a future where <br />
-                    <span className="text-gradient">artificial intelligence</span> is a <br />
-                    universal benefit
+                    Building <span className="text-gradient">AI products</span> <br />
+                    Changing lives
                 </motion.h1>
 
                 <motion.p
@@ -72,7 +71,7 @@ const Hero = () => {
                     transition={{ duration: 0.8, delay: 0.6 }}
                     className="mt-6 sm:mt-8 md:mt-10 text-base sm:text-lg md:text-xl text-aevon-cream/80 max-w-xl md:max-w-2xl"
                 >
-                    Making complex living easier through accessible tools for human development.
+                    Making complex living easier through accessible AI products for human development.
                 </motion.p>
 
 
