@@ -36,7 +36,7 @@ const StoryPortal = () => {
                             Enter Heritage
                         </h3>
                         <p className="text-aevon-cream/90 text-lg mb-8 max-w-md mx-auto leading-relaxed shadow-black drop-shadow-md">
-                            Journey into the ancestral forest. Learn, choose, and shape your story in our immersive 3D experience.
+                            Take a journey, deep into history, understand your root and see ancient lifestyle in a gamified 3D world.
                         </p>
 
                         <button
