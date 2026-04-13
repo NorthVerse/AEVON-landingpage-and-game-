@@ -42,7 +42,7 @@ const Hero = () => {
                     }}
                     poster="/vite.svg" // Fallback image while loading
                 >
-                    <source src="/WhatsApp Video 2026-04-12 at 6.18.48 PM.mp4" type="video/mp4" />
+                    <source src="/hero-video.mp4" type="video/mp4" />
                     {/* Fallback for browsers that don't support video */}
                     Your browser does not support the video tag.
                 </video>
