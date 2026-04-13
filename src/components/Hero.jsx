@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
 const Hero = () => {
@@ -6,14 +6,37 @@ const Hero = () => {
     const [videoLoaded, setVideoLoaded] = useState(false);
     const [videoError, setVideoError] = useState(false);
 
+    useEffect(() => {
+        if (videoRef) {
+            // Force play for mobile devices
+            videoRef.play().catch(err => {
+                console.log("Autoplay prevented:", err);
+            });
+        }
+    }, [videoRef]);
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            if (!videoLoaded && !videoError) {
+                setVideoLoaded(true);
+            }
+        }, 3000);
+        return () => clearTimeout(timer);
+    }, [videoLoaded, videoError]);
+
     const handleVideoLoad = (e) => {
         if (e.target) {
-            e.target.playbackRate = 0.3; // Slow down to 30% speed
+            try {
+                e.target.playbackRate = 0.3; // Slow down to 30% speed
+            } catch (err) {
+                console.log("Playback rate error:", err);
+            }
             setVideoLoaded(true);
         }
     };
 
-    const handleVideoError = () => {
+    const handleVideoError = (e) => {
+        console.error("Video error:", e);
         setVideoError(true);
         setVideoLoaded(false);
     };
@@ -26,24 +49,22 @@ const Hero = () => {
                 <video
                     ref={setVideoRef}
                     className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
-                        videoLoaded ? 'opacity-60 animate-fade-in' : 'opacity-0'
+                        videoLoaded ? 'opacity-60' : 'opacity-0'
                     }`}
                     autoPlay
                     muted
                     loop
                     playsInline
-                    preload="metadata"
+                    preload="auto"
                     onLoadedData={handleVideoLoad}
+                    onCanPlay={handleVideoLoad}
+                    onCanPlayThrough={handleVideoLoad}
                     onError={handleVideoError}
                     style={{
-                        animationDelay: '0.5s',
-                        animationFillMode: 'forwards',
                         objectPosition: 'center'
                     }}
-                    poster="/vite.svg" // Fallback image while loading
                 >
                     <source src="/hero-video.mp4" type="video/mp4" />
-                    {/* Fallback for browsers that don't support video */}
                     Your browser does not support the video tag.
                 </video>
             ) : (
