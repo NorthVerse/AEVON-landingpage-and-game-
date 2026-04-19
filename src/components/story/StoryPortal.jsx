@@ -36,7 +36,7 @@ const StoryPortal = () => {
                             Enter Heritage
                         </h3>
                         <p className="text-aevon-cream/90 text-lg mb-8 max-w-md mx-auto leading-relaxed shadow-black drop-shadow-md">
-                            Explore heritage through an immersive, AI-powered environment for people of all ages to learn language and culture through realistic practice, conversation and scenario-based learning
+                            Not just vocabulary, learn lifestyle and history in a 3D world
                         </p>
 
                         <button
