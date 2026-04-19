@@ -23,12 +23,10 @@ const ProductShowcase = () => {
                         <span className="text-sm font-medium text-aevon-teal uppercase tracking-widest pl-1">Products</span>
                         <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mt-4 mb-6 leading-tight">
                             HERITAGE: <br />
-                            AI Gamified Cultural Storyline
+                            AI Gamified Cultural Learning
                         </h2>
                         <p className="text-base md:text-xl text-aevon-cream/70 mb-8 leading-relaxed max-w-xl">
-                            Explore your heritage through an immersive, AI-driven narrative.
-                            Learn language, traditions, and history guided by intelligent ancestors
-                            who adapt to your learning style.
+                            Explore heritage through an immersive, AI-powered environment for people of all ages to learn language and culture through realistic practice, conversation and scenario-based learning
                         </p>
                         <ul className="space-y-4 mb-10">
                             {['AI Gamified Learning', 'Cultural Preservation'].map((feature, i) => (

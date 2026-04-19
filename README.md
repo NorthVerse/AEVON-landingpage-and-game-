@@ -4,7 +4,7 @@ AEVON is a visionary platform dedicated to leading a future where artificial int
 
 ## 🚀 Key Features
 
-- **HERITAGE: AI Gamified Cultural Storyline**: An immersive 3D experience where you explore ancestral heritage through AI-driven narratives and interactive choice systems.
+- **HERITAGE: AI Gamified Cultural Learning**: Explore heritage through an immersive, AI-powered environment for people of all ages to learn language and culture through realistic practice, conversation and scenario-based learning.
 - **Dynamic 3D Backgrounds**: High-performance, Three.js-powered animated surfaces providing a premium, modern aesthetic.
 - **AI Mentors & Guides**: Adaptive interaction systems designed to help users learn language, traditions, and history.
 - **Modern Responsive UI**: Built with React, Vite, Tailwind CSS, and Framer Motion for smooth, high-fidelity animations.
