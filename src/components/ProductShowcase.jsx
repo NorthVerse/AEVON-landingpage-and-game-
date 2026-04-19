@@ -29,7 +29,7 @@ const ProductShowcase = () => {
                             Explore heritage through an immersive, AI-powered environment for people of all ages to learn language and culture through realistic practice, conversation and scenario-based learning
                         </p>
                         <ul className="space-y-4 mb-10">
-                            {['AI Gamified Learning', 'Cultural Preservation'].map((feature, i) => (
+                            {['AI Gamified Learning', 'Culture and language Preservation'].map((feature, i) => (
                                 <li key={i} className="flex items-center text-aevon-cream/80">
                                     <span className="w-1.5 h-1.5 rounded-full bg-aevon-teal mr-3"></span>
                                     {feature}
