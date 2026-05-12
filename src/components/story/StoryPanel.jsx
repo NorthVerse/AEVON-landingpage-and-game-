@@ -29,7 +29,7 @@ const StoryPanel = ({ currentNode, onNext }) => {
                             className="px-8 py-3 bg-aevon-teal hover:bg-aevon-teal/80 text-aevon-navy font-bold rounded-full transition-all shadow-lg hover:shadow-xl hover:scale-105 flex items-center space-x-3 w-fit mt-4"
                         >
                             <span className="text-lg font-medium">{currentNode.cta || "Continue"}</span>
-                            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <svg className="block w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                             </svg>
                         </motion.button>
