@@ -5,12 +5,12 @@ const teamMembers = [
   {
     image: "/samuel-geoffrey.jpeg",
     name: "Samuel Geoffrey",
-    role: "CEO & Founder",
+    role: "Founder & CEO",
   },
   {
     image: "/excel-chiemeke.jpeg",
     name: "Excel Chiemeke",
-    role: "Co-Founder",
+    role: "Co-Founder & CTO",
   },
   {
     image: "/miracle-egbujor.jpeg",
@@ -127,7 +127,7 @@ export default function Team() {
                       Samuel Geoffrey
                     </p>
                     <p className="text-aevon-amber text-sm font-medium">
-                      CEO & Founder · AEVON
+                      Founder & CEO · AEVON
                     </p>
                   </div>
                 </div>
@@ -159,7 +159,7 @@ export default function Team() {
                       Excel Chiemeke
                     </p>
                     <p className="text-aevon-amber text-sm font-medium">
-                      Co-Founder · AEVON
+                      Co-Founder & CTO · AEVON
                     </p>
                   </div>
                 </div>
