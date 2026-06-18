@@ -26,7 +26,7 @@ const ProductShowcase = () => {
                             AI Gamified Cultural Learning
                         </h2>
                         <p className="text-base md:text-xl text-aevon-cream/70 mb-8 leading-relaxed max-w-xl">
-                            Explore heritage through an immersive, AI-powered environment for people of all ages to learn language and culture through realistic practice, conversation and scenario-based learning
+                            Heritage preserves cultural heritage by teaching the lifestyle of diverse cultural backgrounds using an AI-simulated 3D gaming world.
                         </p>
                         <ul className="space-y-4 mb-10">
                             {['AI Gamified Learning', 'Culture and language Preservation'].map((feature, i) => (

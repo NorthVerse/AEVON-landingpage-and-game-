@@ -4,7 +4,7 @@ AEVON is focused on researching and building AI products to improve performance 
 
 ## 🚀 Key Features
 
-- **HERITAGE: AI Gamified Cultural Learning**: Explore heritage through an immersive, AI-powered environment for people of all ages to learn language and culture through realistic practice, conversation and scenario-based learning.
+- **HERITAGE: AI Gamified Cultural Learning**: Heritage preserves cultural heritage by teaching the lifestyle of diverse cultural backgrounds using an AI-simulated 3D gaming world.
 - **Dynamic 3D Backgrounds**: High-performance, Three.js-powered animated surfaces providing a premium, modern aesthetic.
 - **AI Mentors & Guides**: Adaptive interaction systems designed to help users learn language, traditions, and history.
 - **Modern Responsive UI**: Built with React, Vite, Tailwind CSS, and Framer Motion for smooth, high-fidelity animations.
