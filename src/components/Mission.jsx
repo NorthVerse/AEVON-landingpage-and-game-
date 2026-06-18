@@ -20,8 +20,7 @@ const Mission = () => {
                 >
                     <span className="text-sm font-medium text-aevon-white/40 uppercase tracking-widest pl-1">Our Mission</span>
                     <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mt-4 max-w-2xl text-aevon-white leading-tight">
-                        Ensuring there are <span className="text-gradient">AI products</span> for smooth <br className="hidden md:block" />
-                        educational, financial and cultural transition
+                        Our mission is to <span className="text-gradient">bring intelligence</span> to where matters
                     </h2>
                 </motion.div>
 
