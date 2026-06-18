@@ -92,7 +92,7 @@ const Hero = () => {
                     transition={{ duration: 0.8, delay: 0.6 }}
                     className="mt-6 sm:mt-8 md:mt-10 text-base sm:text-lg md:text-xl text-aevon-cream/80 max-w-xl md:max-w-2xl"
                 >
-                    Making complex living easier through accessible AI products for human development.
+                    AEVON is focused on researching and building AI products to improve performance across digital culture, finance and education.
                 </motion.p>
 
 

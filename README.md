@@ -1,6 +1,6 @@
 # AEVON Prototype
 
-AEVON is a visionary platform dedicated to leading a future where artificial intelligence is a universal benefit. We focus on bridging gaps in human development through accessible tools and immersive cultural experiences.
+AEVON is focused on researching and building AI products to improve performance across digital culture, finance and education.
 
 ## 🚀 Key Features
 
