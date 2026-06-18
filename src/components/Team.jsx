@@ -10,7 +10,7 @@ const teamMembers = [
   {
     image: "/excel-chiemeke.jpeg",
     name: "Excel Chiemeke",
-    role: "Co-Founder & CTO",
+    role: "Lead Developer",
   },
   {
     image: "/miracle-egbujor.jpeg",
@@ -159,7 +159,7 @@ export default function Team() {
                       Excel Chiemeke
                     </p>
                     <p className="text-aevon-amber text-sm font-medium">
-                      Co-Founder & CTO · AEVON
+                      Lead Developer · AEVON
                     </p>
                   </div>
                 </div>
